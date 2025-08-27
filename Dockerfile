@@ -1,3 +1,4 @@
 FROM n8nio/n8n:latest
-# Make n8n listen on Render's assigned $PORT instead of 5678
-CMD ["sh", "-c", "n8n start --port ${PORT:-5678}"]
+
+# Run n8n on Railway’s assigned port
+CMD ["sh", "-c", "n8n start --port ${PORT:-5555}"]
